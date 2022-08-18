@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<div class="w3-row-padding w3-padding-64">
+    <h2 style="direction:rtl">اخبار و اطلاعیه‌ها</h2>
+    <p style="direction:rtl">آخرین اخبار و اطلاعیه‌های همنورد را می‌توانید از این قسمت دنبال کنید</p><br>
+    <div ALIGN=RIGHT class="w3-margin-bottom">
+      <!--ul class="w3-ul w3-border w3-hover-shadow">-->
+        <li class="w3-padding-16"><a href="{% url 'new'%}"> اطلاعیه‌ی اول</li>
+        <li style="direction:rtl" class="w3-padding-16"><a href="{% url 'new'%}">اطلاعیه‌ی دوم</li>
+        <li style="direction:rtl" class="w3-padding-16"><a href="{% url 'new'%}">اظلاعیه‌ی سوم</li>
+        <li style="direction:rtl" class="w3-padding-16"><a href="{% url 'new'%}">اطلاعیه‌ی چهارم</li>
+		<li style="direction:rtl" class="w3-padding-16"><a href="{% url 'new'%}">اطلاعیه‌ی پنجم</li>
+        <li style="direction:rtl" class="w3-padding-16"><a href="{% url 'new'%}">اطلاعیه‌ی ششم</li>
+        <li style="direction:rtl" class="w3-padding-16"><a href="{% url 'new'%}">اظلاعیه‌ی هفتم</li>
+        <li style="direction:rtl" class="w3-padding-16"><a href="{% url 'new'%}">اطلاعیه‌ی هشتم</li>
+        <li style="direction:rtl" class="w3-theme-l5 w3-padding-24">
+        </li>
+      </ul>
+    </div>
+</div>
+{% endblock %}

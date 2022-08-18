@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<div class="w3-row-padding w3-padding-64">
+    <h2 style="direction:rtl">مقالات</h2>
+    <div ALIGN=RIGHT class="w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-padding-16"><a href="{% url 'article'%}"> مقاله‌ی اول</li>
+        <li style="direction:rtl" class="w3-padding-16"><a href="{% url 'article'%}">مقاله‌ی دوم</li>
+		<li style="direction:rtl" class="w3-padding-16"><a href="{% url 'article'%}">مقاله‌ی سوم</li>
+		<li style="direction:rtl" class="w3-padding-16"><a href="{% url 'article'%}">مقاله‌ی چهارم</li>
+		<li style="direction:rtl" class="w3-padding-16"><a href="{% url 'article'%}">مقاله‌ی پنجم</li>
+        <li style="direction:rtl" class="w3-theme-l5 w3-padding-24">
+        </li>
+      </ul>
+    </div>
+</div>
+{% endblock %}

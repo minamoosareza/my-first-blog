@@ -8,6 +8,32 @@ from django.shortcuts import redirect
 def homepage(request):
 	#posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
 	return render(request, 'blog/homepage.html', {})
+	
+def pastcourses_list(request):
+	return render(request, 'blog/pastcourses_list.html', {})
+
+def current_course(request):
+	return render(request, 'blog/current_course.html', {})
+	
+def signup(request):
+	return render(request, 'blog/signup.html', {})
+
+def past_course(request):
+	return render(request, 'blog/past_course.html', {})
+
+def articles_list(request):
+	return render(request, 'blog/articles_list.html', {})
+
+def article(request):
+	return render(request, 'blog/article.html', {})
+
+def news_list(request):
+	return render(request, 'blog/news_list.html', {})
+
+def new(request):
+	return render(request, 'blog/new.html', {})	
+	
+	
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
