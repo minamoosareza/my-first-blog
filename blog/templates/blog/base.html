@@ -1,14 +1,14 @@
-<!--{% load static %}-->
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
 <title ALIGN=RIGHT style="direction:rtl" class="w3-right">همنورد</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--<link rel="stylesheet" href="{% static 'css/blog.css' %}">-->
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
 </head>
 <body id="myPage">
 
@@ -28,11 +28,11 @@
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="{% url 'homepage' %}" class="w3-bar-item w3-button w3-right w3-teal">خانه<i class="fa fa-home w3-margin-left"></i></a>
-  <a href="{% url 'homepage' %}#courses" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white">دوره‌ها</a>
-  <a href="{% url 'homepage' %}#articles" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white">مقالات</a>
-  <a href="{% url 'homepage' %}#news" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white">اخبار</a>
-  <a href="{% url 'homepage' %}#contact" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white">تماس با ما</a>
+  <a href="{% url 'homepage' %}" class="w3-hover-text-theme m-button w3-bar-item w3-button w3-right w3-hover-white">محل قرارگیری لوگو</a>
+  <a href="{% url 'homepage' %}#courses" class="w3-hover-text-theme m-button w3-bar-item w3-button w3-hide-small w3-right w3-hover-white">دوره‌ها</a>
+  <a href="{% url 'homepage' %}#articles" class="w3-hover-text-theme m-button w3-bar-item w3-button w3-hide-small w3-right w3-hover-white">مقالات</a>
+  <a href="{% url 'homepage' %}#news" class="w3-hover-text-theme m-button w3-bar-item w3-button w3-hide-small w3-right w3-hover-white">اخبار</a>
+  <a href="{% url 'homepage' %}#contact" class="w3-hover-text-theme m-button w3-bar-item w3-button w3-hide-small w3-right w3-hover-white">تماس با ما</a>
     <!--<div class="w3-dropdown-hover w3-hide-small">
     <button class="w3-button" title="Notifications">Dropdown <i class="fa fa-caret-down"></i></button>     
     <div class="w3-dropdown-content w3-card-4 w3-bar-block">
@@ -45,11 +45,11 @@
  </div>
 
   <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-    <a href="{% url 'homepage' %}#courses" class="w3-right w3-bar-item w3-button">دوره‌ها</a>
-    <a href="{% url 'homepage' %}#articles" class="w3-right w3-bar-item w3-button">مقالات</a>
-    <a href="{% url 'homepage' %}#news" class="w3-right w3-bar-item w3-button">اخبار</a>
-    <a href="{% url 'homepage' %}#contact" class="w3-right w3-bar-item w3-button">تماس با ما</a>
+  <div id="navDemo" class="w3-right w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="{% url 'homepage' %}#courses" class="w3-right m-button w3-bar-item w3-button">دوره‌ها</a>
+    <a href="{% url 'homepage' %}#articles" class="w3-right m-button w3-bar-item w3-button">مقالات</a>
+    <a href="{% url 'homepage' %}#news" class="w3-right m-button w3-bar-item w3-button">اخبار</a>
+    <a href="{% url 'homepage' %}#contact" class="w3-right m-button 3-bar-item w3-button">تماس با ما</a>
     <!--<a href="#" class="w3-bar-item w3-button">Search</a>-->
   </div>
 </div>
@@ -61,21 +61,37 @@
 <!--<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%;">-->
 
 <!-- Footer -->
-<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
-  <h4>ما را دنبال کنید</h4>
-  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
-  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
-  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
-  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
-  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
-  <p>تمامی حقوق برای موسسه فرهنگی همنورد محفوظ است</p>
+<div class="w3-container w3-padding-64 w3-theme-l1" style="box-shadow: 0 20px 20px rgba(192, 244, 222, 1), 0 0 20px 20px rgba(192, 244, 222, 1)" id="contact">
+  <div class="w3-row">
+    <div ALIGN=RIGHT class="w3-col m4 w3-right">
+	  <form method="POST" enctype="multipart/form-data" class="mmm-form post-form w3-container w3-card-4 w3-padding-16 w3-white" style="direction:rtl" >{% csrf_token %}
+				{{ form.as_p }}
+				<button type="submit" class="mmm-button-animate-top w3-round-xxlarge w3-margin-right m-button w3-btn w3-teal w3-padding-large w3-right">ارسال پیام</button>
+	  </form>
+    </div>
+	<div ALIGN=RIGHT class="w3-col m4 w3-right mmm-margin-right">
+    <div class="w3-padding-16"><span class="w3-border-teal w3-bottombar"><h3>تماس با ما</h3></span></div>
+      <!--<p>Swing by for a cup of coffee, or whatever.</p>-->
+      <p class="mmm-font">آدرس موسسه در این قسمت قرار می گیرد <i style="direction:rtl" class="w3-text-teal w3-xlarge">{% include './icons/geo-alt-fill.svg' %}</i></p>
+      <p>۰۲۱-۱۲۳۴۵۶۷۸ <i style="direction:rtl" class="w3-text-teal w3-xlarge">{% include './icons/telephone-fill.svg' %}</i></p>
+      <p>نشانی ایمیل موسسه <i style="direction:rtl" class="w3-text-teal w3-xlarge">{% include './icons/envelope-fill.svg' %}</i></p>
+	    <a class="w3-margin-right" href="javascript:void(0)" title="Instagram"><i class="w3-text-teal w3-xlarge">{% include './icons/instagram.svg' %}</i></a>
+		<a class="w3-margin-right" href="javascript:void(0)" title="Linkedin"><i class="w3-text-teal w3-xlarge">{% include './icons/linkedin.svg' %}</i></a>
+		<a class="w3-margin-right" href="javascript:void(0)" title="Telegram"><i class="w3-text-teal w3-xlarge">{% include './icons/telegram.svg' %}</i></a>
+    </div>
+  </div>
+</div>
+<!--<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h6>ما را دنبال کنید</h6>
+  
+  <h6>تمامی حقوق برای موسسه فرهنگی همنورد محفوظ است</h6>
 
   <!--<div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
     <span class="w3-text w3-padding w3-teal w3-hide-small">بازگشت به بالای صفحه</span>   
     <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
     <i class="fa fa-chevron-circle-up"></i></span></a>
-  </div>-->
-</footer>
+  </div>
+</footer>-->
 
 <script>
 // Script for side navigation

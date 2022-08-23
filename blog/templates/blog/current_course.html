@@ -3,10 +3,10 @@
 	<div class="w3-container w3-padding-64">
 		<div class="w3-row-padding">
 			<div class="w3-right ">
-				<h2 style="direction:rtl" ALIGN=RIGHT>عنوان دوره<br/></h2>
-				<p style="direction:rtl">توضیحات دوره</p>
+				<h2 style="direction:rtl" ALIGN=RIGHT>{{course.title}}<br/></h2>
+				<p style="direction:rtl">{{courese.content}}</p>
 				<div>
-					<button class="w3-button w3-teal w3-padding-large"><a href="{% url 'signup'%}">ثبت نام</button>
+					<button class="w3-button w3-teal w3-padding-large"><a href="{% url 'signup' pk=course.pk %}">ثبت نام</button>
 				</div>
 			</div> 
 		</div>

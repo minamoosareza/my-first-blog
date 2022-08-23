@@ -6,16 +6,9 @@
 	ر خود ببینیم</p><br>
     <div ALIGN=RIGHT class="w3-margin-bottom">
       <ul class="w3-ul w3-border w3-hover-shadow">
-        <li class="w3-padding-16"><a href="{% url 'past_course'%}"> دوره‌ی اول</li>
-        <li style="direction:rtl" class="w3-padding-16"><a href="{% url 'past_course'%}">دوره‌ی دوم</li>
-        <li style="direction:rtl" class="w3-padding-16"><a href="{% url 'past_course'%}">دوره‌ی سوم</li>
-        <li style="direction:rtl" class="w3-padding-16"><a href="{% url 'past_course'%}">دوره‌ی چهارم</li>
-		<li style="direction:rtl" class="w3-padding-16"><a href="{% url 'past_course'%}">دوره‌ی پنجم</li>
-        <li style="direction:rtl" class="w3-padding-16"><a href="{% url 'past_course'%}">دوره‌ی ششم</li>
-        <li style="direction:rtl" class="w3-padding-16"><a href="{% url 'past_course'%}">دوره‌ی هفتم</li>
-        <li style="direction:rtl" class="w3-padding-16"><a href="{% url 'past_course'%}">دوره‌ی هشتم</li>
-        <li style="direction:rtl" class="w3-theme-l5 w3-padding-24">
-        </li>
+		    {% for course in courses %}
+			    <li style="direction:rtl" class="w3-padding-16"><a href="{% url 'past_course' pk=course.pk %}">{{course.title}}</a></li>
+		    {% endfor %}
       </ul>
     </div>
 </div>

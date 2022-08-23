@@ -4,22 +4,53 @@ from django.utils import timezone
 
 
 class Course(models.Model):
+    title = models.CharField(max_length=200)
+    abstract = models.TextField()
+    content = models.TextField()
+    is_active = models.BooleanField()
+    picture = models.ImageField(upload_to='uploads/')
+    def publish(self):
+	    self.save()
+    def __str__(self):
+	    return self.title
+
+class Article(models.Model):
 	title = models.CharField(max_length=200)
 	abstract = models.TextField()
-	text = models.TextField()
-	is_activate = models.BooleanField()
-    
-	
-class Post(models.Model):
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    title = models.CharField(max_length=200)
-    text = models.TextField()
-    created_date = models.DateTimeField(default=timezone.now)
-    published_date = models.DateTimeField(blank=True, null=True)
-
+	content = models.TextField()
+	picture = models.ImageField(upload_to='uploads/')
+	def publish(self):
+	    self.save()
+	def __str__(self):
+	    return self.title
+		
+class New(models.Model):
+	title = models.CharField(max_length=200)
+	content = models.TextField()
+	date = models.DateTimeField(default=timezone.now)
+	def publish(self):
+	    self.save()
+	def __str__(self):
+	    return self.title
+		
+class Signup(models.Model):
+    name = models.CharField(max_length=50)
+    phone = models.CharField(max_length=11)
+    email = models.EmailField(max_length=50)
+    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    #class Meta:
+     #   unique_together = ('course', 'email',)
     def publish(self):
-        self.published_date = timezone.now()
         self.save()
-
     def __str__(self):
-        return self.title
+        return self.name
+
+class Contact(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField(max_length=50)
+    message = models.TextField()
+    def publish(self):
+        self.save()
+    def __str__(self):
+        return self.name
+

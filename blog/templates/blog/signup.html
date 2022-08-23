@@ -6,6 +6,10 @@
 				<h2 style="direction:rtl" class="w3-center">ثبت نام<br/></h2>
 				<p style="direction:rtl">سلام دوست عزیز! از اینکه در کنار ما هستی خوشحال و مفتخریم. جهت ثبت نام در این دوره لطفا پس از پرکردن تمام قسمت‌های فرم زیر کلید ثبت نام را انتخاب کنید.</p>
 			</div> 
+			<form method="POST" enctype="multipart/form-data" class="post-form w3-center" style="direction:rtl" >{% csrf_token %}
+				{{ form.as_p }}
+				<button type="submit" class="w3-hover-coral w3-btn w3-theme-d6 w3-round-xlarge save btn btn-default">ثبت نام</button>
+			</form>
 		</div>
 	</div>
 {% endblock %}
