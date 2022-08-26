@@ -27,7 +27,7 @@
 <!-- Navbar -->
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align">
-  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i>{% include './icons/list.svg' %}</i></a>
   <a href="{% url 'homepage' %}" class="w3-hover-text-theme m-button w3-bar-item w3-button w3-right w3-hover-white">محل قرارگیری لوگو</a>
   <a href="{% url 'homepage' %}#courses" class="w3-hover-text-theme m-button w3-bar-item w3-button w3-hide-small w3-right w3-hover-white">دوره‌ها</a>
   <a href="{% url 'homepage' %}#articles" class="w3-hover-text-theme m-button w3-bar-item w3-button w3-hide-small w3-right w3-hover-white">مقالات</a>
@@ -66,7 +66,7 @@
     <div ALIGN=RIGHT class="w3-col m4 w3-right">
 	  <form method="POST" enctype="multipart/form-data" class="mmm-form post-form w3-container w3-card-4 w3-padding-16 w3-white" style="direction:rtl" >{% csrf_token %}
 				{{ form.as_p }}
-				<button type="submit" class="mmm-button-animate-top w3-round-xxlarge w3-margin-right m-button w3-btn w3-teal w3-padding-large w3-right">ارسال پیام</button>
+				<button type="submit" class="animatetop w3-round-xxlarge w3-margin-right m-button w3-btn w3-teal w3-padding-large w3-right">ارسال پیام</button>
 	  </form>
     </div>
 	<div ALIGN=RIGHT class="w3-col m4 w3-right mmm-margin-right">
@@ -116,6 +116,24 @@ function openNav() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+//animation on scroll
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
 </script>
 
 </body>

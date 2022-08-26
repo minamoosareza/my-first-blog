@@ -21,6 +21,7 @@ class ContactForm(forms.ModelForm):
         self.fields['email'].widget.attrs['placeholder'] = "ایمیل"
         self.fields['message'].widget.attrs['placeholder'] = "پیام"
         self.fields['message'].widget.attrs['rows'] = 5
+        self.fields['message'].widget.attrs['columns'] = 5
     class Meta:
         model = Contact
         fields = ('name', 'email', 'message')

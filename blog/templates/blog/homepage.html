@@ -32,8 +32,8 @@
 <div class="w3-container" id="aboutus">
   <div class="w3-row-padding">
     <div>
-      <h2 class="w3-center w3-animate-right">معرفی موسسه<br/></h2>
-      <p class="w3-right w3-animate-left mmm-justify" style="direction:rtl">نقل است كه مرحوم قاضى رضوان الله عليه مى‏فرمودند: كه بهترين راه و سريعترين راه كه براى از بين بردن اغراض و نيّتهاى نفسانى كه در سلوك راه خدا مؤثّر باشد و حكم راه ميان بُرى كه يكباره سالك را نجات دهد و از هر داعيه و انگيزه غيرالهى و بالاخره از صفت بيرون آورد احراق است و آن طريقه را قرآن مجيد آموخته است. مثلًا كسى كه به او مصيبتى وارد آيد از موت اهل و فرزند يا غير آنها به طرق مختلفى مى‏توان خود را تسكين دهد مانند آنكه اين اهل و فرزند ممكن بود در آتيه براى من ضرر داشته باشند يا در انجام خواسته‏هاى خود مرا خسته كنند يا آنكه ديگران نيز مانند من زن و فرزند خود را از دست داده و مى‏دهند و نظائر آن.</p>
+      <h2 class="w3-center reveal animateright">معرفی موسسه<br/></h2>
+      <p class="w3-right reveal animateleft mmm-justify" style="direction:rtl">نقل است كه مرحوم قاضى رضوان الله عليه مى‏فرمودند: كه بهترين راه و سريعترين راه كه براى از بين بردن اغراض و نيّتهاى نفسانى كه در سلوك راه خدا مؤثّر باشد و حكم راه ميان بُرى كه يكباره سالك را نجات دهد و از هر داعيه و انگيزه غيرالهى و بالاخره از صفت بيرون آورد احراق است و آن طريقه را قرآن مجيد آموخته است. مثلًا كسى كه به او مصيبتى وارد آيد از موت اهل و فرزند يا غير آنها به طرق مختلفى مى‏توان خود را تسكين دهد مانند آنكه اين اهل و فرزند ممكن بود در آتيه براى من ضرر داشته باشند يا در انجام خواسته‏هاى خود مرا خسته كنند يا آنكه ديگران نيز مانند من زن و فرزند خود را از دست داده و مى‏دهند و نظائر آن.</p>
     </div> 
   </div>
 </div>
@@ -47,13 +47,13 @@
 <div class="w3-row"><br>
 {% for course in courses %}
   <div class="w3-quarter w3-right">
-    <div><a href="{% url 'current_course' pk=course.pk %}"><img src="{{course.picture.url}}" alt="{{course.title}}" style="width:45%" class="mmm-hover-enlarge w3-animate-zoom"></a></div>
-    <h3 class="w3-animate-opacity">{{course.title}}</h3>
-    <p class="w3-animate-opacity" style="direction:rtl">{{course.abstract}}</p>
+    <div><a href="{% url 'current_course' pk=course.pk %}"><img src="{{course.picture.url}}" alt="{{course.title}}" style="width:45%" class="mmm-hover-enlarge reveal animatezoom"></a></div>
+    <h3 class="reveal opac">{{course.title}}</h3>
+    <p class="reveal opac" style="direction:rtl">{{course.abstract}}</p>
   </div>
 {% endfor %}
 </div>
-<a href="{% url 'pastcourses_list' %}" class="mmm-button-animate-top w3-round-xxlarge w3-margin-right m-button w3-btn w3-teal w3-padding-large w3-center">دوره‌های قبلی</a>
+<a href="{% url 'pastcourses_list' %}" class="reveal animatetop w3-round-xxlarge w3-margin-right m-button w3-btn w3-teal w3-padding-large w3-center">دوره‌های قبلی</a>
 </div>
 
 <!-- Work Row مقالات-->
@@ -62,12 +62,12 @@
 <div class="w3-quarter w3-right">
 <h2 style="direction:rtl">مقالات</h2>
 <p style="direction:rtl">در صورت نیاز توضیحاتی درباره‌ی محتوای مقالات و مخاطب آن‌ها و هدف قرار گرفتن آن‌ها در سایت در اینجا ارائه می شود </p>
-<a href="{% url 'articles_list'%}" class="mmm-button-animate-top w3-round-xxlarge w3-margin-right m-button w3-btn w3-teal w3-padding-large w3-right">تمام مقالات</a>
+<a href="{% url 'articles_list'%}" class="reveal animatetop w3-round-xxlarge w3-margin-right m-button w3-btn w3-teal w3-padding-large w3-right">تمام مقالات</a>
 </div>
 {% for article in articles %}
   <div class="w3-quarter w3-right">
-  <div class="w3-round-large w3-white w3-animate-bottom">
-    <div ALIGN=CENTER class="w3-center"><a href="{% url 'article' pk=article.pk %}"><img src="{{article.picture.url}}" alt="{{article.title}}" style="width:50%" class="mmm-hover w3-animate-opacity-delay"></a></div>
+  <div class="w3-round-large w3-white reveal animatebottom">
+    <div ALIGN=CENTER class="w3-center"><a href="{% url 'article' pk=article.pk %}"><img src="{{article.picture.url}}" alt="{{article.title}}" style="width:50%" class="reveal mmm-hover opacdel"></a></div>
     <div class="w3-container">
       <h3 style="direction:rtl">{{article.title}}</h3>
   <!--<h4>Trade</h4>-->
@@ -91,14 +91,14 @@
     <div ALIGN=RIGHT class="w3-margin-bottom">
       <ul class="w3-ul w3-border">
         {% for new in news %}
-          <li style="direction:rtl text-decoration:none" class="w3-animate-top w3-padding-32 w3-hover-shadow"><a href="{% url 'new' pk=new.pk %}" style="text-decoration:none;">{{new.title}}</a></li>
+          <li style="direction:rtl text-decoration:none" class="reveal myanimatetop w3-padding-32 w3-hover-shadow"><a href="{% url 'new' pk=new.pk %}" style="text-decoration:none;">{{new.title}}</a></li>
         {% endfor %}
         <!--<li style="direction:rtl" class="w3-padding-24">
       
         </li>-->
       </ul>
       <div class = "w3-padding-24 w3-center"></div>
-      <a href="{% url 'news_list'%}" class="mmm-button-animate-top w3-round-xxlarge w3-margin-right m-button w3-btn w3-teal w3-padding-large w3-center">تمام اخبار</a>
+      <a href="{% url 'news_list'%}" class="reveal animatetop w3-round-xxlarge w3-margin-right m-button w3-btn w3-teal w3-padding-large w3-center">تمام اخبار</a>
       </div>
     </div>
 </div>
